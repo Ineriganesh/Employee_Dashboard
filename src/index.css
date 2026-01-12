@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Material UI based design system - colors defined in HSL format */
+
+@layer base {
+  :root {
+    /* Primary - Professional Blue */
+    --primary: 211 85% 42%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 207 90% 94%;
+    --primary-dark: 211 100% 34%;
+
+    /* Secondary - Accent Purple */
+    --secondary: 262 100% 65%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Background */
+    --background: 210 40% 98%;
+    --foreground: 215 25% 27%;
+
+    /* Surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 27%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 27%;
+
+    /* Status Colors */
+    --success: 122 39% 34%;
+    --success-light: 120 40% 92%;
+    --error: 0 65% 51%;
+    --error-light: 0 86% 97%;
+    --warning: 25 95% 47%;
+    --warning-light: 33 100% 96%;
+
+    /* Muted */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Borders & Input */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 211 85% 42%;
+
+    /* Radius */
+    --radius: 0.5rem;
+
+    /* Destructive */
+    --destructive: 0 65% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Accent */
+    --accent: 210 40% 96%;
+    --accent-foreground: 215 25% 27%;
+  }
+
+  .dark {
+    --primary: 211 85% 60%;
+    --primary-foreground: 0 0% 100%;
+    --background: 215 28% 9%;
+    --foreground: 210 40% 98%;
+    --card: 215 28% 13%;
+    --card-foreground: 210 40% 98%;
+    --popover: 215 28% 13%;
+    --popover-foreground: 210 40% 98%;
+    --muted: 215 20% 18%;
+    --muted-foreground: 215 16% 64%;
+    --border: 215 20% 20%;
+    --input: 215 20% 20%;
+    --ring: 211 85% 60%;
+    --destructive: 0 65% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --accent: 215 20% 18%;
+    --accent-foreground: 210 40% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
